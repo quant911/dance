@@ -1,0 +1,122 @@
+# This is the system description file for object skel18
+
+gravity = 0 0 0
+language = c
+
+double
+prefix = skel18
+
+body = Hip inb	= $ground joint = free
+	mass = 16.610000
+	inertia = 0.180000 0.160000 0.230000
+	inbtojoint = 0.000000 1.131000 0.005200
+	bodytojoint =	0.000000 0.120600 0.050000
+	pin = 1.000000 0.000000 0.000000
+	pin = 0.000000 1.000000 0.000000
+	pin = 0.000000 0.000000 1.000000
+body = Trunk_comp inb	= Hip joint = gimbal
+	mass = 29.270000
+	inertia = 0.630000 0.320000 0.730000
+	inbtojoint = 0.000000 0.120600 0.050000
+	bodytojoint =	0.000000 -0.146250 0.035100
+	pin = 1.000000 0.000000 0.000000
+	pin = 0.000000 0.000000 1.000000
+	pin = 0.000000 1.000000 0.000000
+body = Neck inb	= Trunk_comp joint = gimbal
+	mass = 1.000000
+	inertia = 0.006000 0.001000 0.006000
+	inbtojoint = 0.000000 0.246350 -0.001300
+	bodytojoint =	0.000000 -0.044200 -0.006500
+	pin = 1.000000 0.000000 0.000000
+	pin = 0.000000 0.000000 1.000000
+	pin = 0.000000 1.000000 0.000000
+body = Head_comp inb	= Neck joint = pin
+	mass = 5.890000
+	inertia = 0.033000 0.023000 0.030000
+	inbtojoint = 0.000000 0.044200 0.006500
+	bodytojoint =	0.000000 -0.078000 -0.031200
+	pin = 1.000000 0.000000 0.000000
+body = Left_Shoulder inb	= Trunk_comp joint = ujoint
+	mass = 2.790000
+	inertia = 0.005000 0.025000 0.025000
+	inbtojoint = 0.176800 0.189150 0.001300
+	bodytojoint =	-0.132600 0.000000 -0.001300
+	pin = 0.000000 0.000000 1.000000
+	pin = 0.000000 1.000000 0.000000
+body = Left_Forearm inb	= Left_Shoulder joint = ujoint
+	mass = 1.210000
+	inertia = 0.001200 0.005400 0.005000
+	inbtojoint = 0.132600 0.000000 0.001300
+	bodytojoint =	-0.137800 -0.003900 0.000000
+	pin = 0.000000 1.000000 0.000000
+	pin = 1.000000 0.000000 0.000000
+body = Left_Hand inb	= Left_Forearm joint = ujoint
+	mass = 0.550000
+	inertia = 0.000500 0.002000 0.001600
+	inbtojoint = 0.137800 0.003900 0.000000
+	bodytojoint =	-0.065000 0.000000 0.000000
+	pin = 0.000000 0.000000 1.000000
+	pin = 0.000000 1.000000 0.000000
+body = Right_Shoulder inb	= Trunk_comp joint = ujoint
+	mass = 2.790000
+	inertia = 0.005000 0.025000 0.025000
+	inbtojoint = -0.176800 0.189150 0.001300
+	bodytojoint =	0.132600 0.000000 -0.001300
+	pin = 0.000000 0.000000 1.000000
+	pin = 0.000000 1.000000 0.000000
+body = Right_Forearm inb	= Right_Shoulder joint = ujoint
+	mass = 1.210000
+	inertia = 0.001200 0.005400 0.005000
+	inbtojoint = -0.132600 0.000000 0.001300
+	bodytojoint =	0.137800 -0.003900 0.000000
+	pin = 0.000000 1.000000 0.000000
+	pin = 1.000000 0.000000 0.000000
+body = Right_Hand inb	= Right_Forearm joint = ujoint
+	mass = 0.550000
+	inertia = 0.000500 0.002000 0.001600
+	inbtojoint = -0.137800 0.003900 0.000000
+	bodytojoint =	0.065000 0.000000 0.000000
+	pin = 0.000000 0.000000 1.000000
+	pin = 0.000000 1.000000 0.000000
+body = Left_Thigh inb	= Hip joint = gimbal
+	mass = 8.350000
+	inertia = 0.160000 0.025000 0.150000
+	inbtojoint = 0.111800 -0.040600 0.005800
+	bodytojoint =	0.016900 0.237900 -0.014300
+	pin = 1.000000 0.000000 0.000000
+	pin = 0.000000 0.000000 1.000000
+	pin = 0.000000 1.000000 0.000000
+body = Left_Shin inb	= Left_Thigh joint = pin
+	mass = 4.160000
+	inertia = 0.056000 0.007000 0.055000
+	inbtojoint = -0.016900 -0.237900 0.014300
+	bodytojoint =	0.007800 0.215800 0.003900
+	pin = 1.000000 0.000000 0.000000
+body = Left_Foot inb	= Left_Shin joint = ujoint
+	mass = 1.340000
+	inertia = 0.007500 0.007000 0.001800
+	inbtojoint = -0.007800 -0.215800 -0.003900
+	bodytojoint =	0.000000 0.044200 -0.039000
+	pin = 1.000000 0.000000 0.000000
+	pin = 0.000000 0.000000 1.000000
+body = Right_Thigh inb	= Hip joint = gimbal
+	mass = 8.350000
+	inertia = 0.160000 0.025000 0.150000
+	inbtojoint = -0.111800 -0.040600 0.005800
+	bodytojoint =	-0.016900 0.237900 -0.014300
+	pin = 1.000000 0.000000 0.000000
+	pin = 0.000000 0.000000 1.000000
+	pin = 0.000000 1.000000 0.000000
+body = Right_Shin inb	= Right_Thigh joint = pin
+	mass = 4.160000
+	inertia = 0.056000 0.007000 0.055000
+	inbtojoint = 0.016900 -0.237900 0.014300
+	bodytojoint =	-0.007800 0.215800 0.003900
+	pin = 1.000000 0.000000 0.000000
+body = Right_Foot inb	= Right_Shin joint = ujoint
+	mass = 1.340000
+	inertia = 0.007500 0.007000 0.001800
+	inbtojoint = 0.007800 -0.215800 -0.003900
+	bodytojoint =	0.000000 0.044200 -0.039000
+	pin = 1.000000 0.000000 0.000000
+	pin = 0.000000 0.000000 1.000000

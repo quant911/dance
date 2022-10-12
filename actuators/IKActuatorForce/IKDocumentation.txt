@@ -1,0 +1,49 @@
+A BRIEF DOCUMENTATION
+
+Major Classes:
+
+IKActuatorForce
+This is the main class.  It handles all the input and output, and manages all the data structures
+
+IKassembler
+The assembler helps to manage some of the data sturctures, and has the solve routine which solves the IK 
+problem.
+
+IK_Constraint
+Holds data on the a particular goal, and has routines for optimizing joint angles to acheive that goal.   
+Currently there are two subclasses of IKconstraint, posConstraint and orientConstraint.  
+
+IK_Joint
+Contains a translation matrix, and routines for using and modifying the matrix. Each IK_Joint has only 
+one degree of freedom, and corresponds to a DOF in a Joint in the ArticualtedObject.
+
+
+
+
+Major Data Structures:
+
+recs
+recs is a member of IKActuatorForce. It is a list of DOFrecords.
+It is stored in numerical order, so the DOFrecord::add procedure and DOFrecord::find procedure should be 
+called on the first DOFrecord in the list to modify it.  (Don't use the list::add procedure)
+
+Each DOFrecord with a positive number corresponds to a joint in the Articulated Object, and it holds a 
+pointer to an IK_Joint for every DOF of the Joint.  There is a DOFrecord corresponding to the root IK_Joint,
+which has no real Joint, and number -1
+
+
+joints
+joints is a member of the IKassembler class, and is list of IKdata.
+The list is stored in random order.
+
+Each IKdata holds a pointer to an IK_Joint, and which constraints the IK_Joint should be optimized for.
+
+
+allConstraints
+is a member of the IKassembler class. It is simply a list of all the IKconstraints.
+
+root
+The root member of the IKassembler class is an the root IK_Joint.  from the root, all the IKJoints can be accessed by traveling down through child joints.   
+
+
+

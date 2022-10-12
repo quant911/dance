@@ -1,0 +1,5 @@
+Jan. 22, 1999
+
+The VCollide and RAPID libraries have been modified slightly to allow more access to the RAPID
+constructs for DANCE within VCollide. Filenames have also been changed to allow easier multiplatform
+building. - Victor Ng

@@ -1,0 +1,221 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "ArticulatedObject"=.\systems\ArticulatedObject\ArticulatedObject.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name dance
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "FieldActuator"=.\actuators\FieldActuator\FieldActuator.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IKActuatorForce"=.\actuators\IKActuatorForce\IKActuatorForce.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IndexedFaceSet"=.\geometry\IndexedFaceSet\IndexedFaceSet.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name dance
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "KinematicActuator"=.\actuators\KinematicActuator\KinematicActuator.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name dance
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ParticlePointSimul"=.\simulators\ParticlePointSimul\ParticlePointSimul.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name dance
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ParticlePointSystem
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ParticlePointSystem"=.\systems\ParticlePointSystem\ParticlePointSystem.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name dance
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PlaneGround"=.\actuators\PlaneGround\PlaneGround.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name dance
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RAPID"=.\VCOLLIDE\RAPID\RAPID.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SdfastSimul"=.\simulators\SdfastSimul\SdfastSimul.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ArticulatedObject
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name dance
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Vcollide"=.\VCOLLIDE\Vcollide.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RAPID
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "dance"=.\src\dance.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RAPID
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Vcollide
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "pend"=.\sdfastObjs\pend\pend.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "skel18"=.\sdfastObjs\skel18\skel18.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

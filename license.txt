@@ -1,0 +1,52 @@
+License for DANCE (Dynamic Animation and Control Environment)
+Copyright (C) 2000
+
+1) Scope
+All terms of this license apply to the whole or any part of the DANCE core 
+software and plug-ins developed by the DANCE authors (see Definitions below) 
+unless explicitly stated otherwise. For plug-ins or portions of the DANCE 
+core written by third parties or that have separate license agreements, 
+those parts of the code fall under their own license agreements. 
+
+2) Definitions
+   The following terms used throughout the license will refer to the 
+   stated definitions.
+   a) "DANCE authors" refers to the original authors of DANCE: 
+      Petros Faloutsos (pfal@dgp.toronto.edu) and 
+      Victor Ng-Thow-Hing (victorng@dgp.toronto.edu).
+   b) "DANCE system" refers the whole or any part of the software, related 
+      files, and directories comprising the DANCE core
+      code and file distribution as well as plug-ins developed by the 
+      DANCE authors.
+   c) "Commercial Use" is any use that results in payment in cash or goods
+      in exchange for products or services created using the DANCE core code,
+      including the prototyping of final products. 
+				
+3) Usage
+   a) Non-commercial use: The DANCE system is free for non-commercial use 
+      and can be modified freely. For distribution rules, see Distributions.
+   b) Commerical use: Use or modification of the DANCE system for 
+      commercial purposes must be approved first by asking the permission 
+      of the DANCE authors. Permission does not have to be received until
+      the commercial product or service becomes available to third parties.
+   c) Licensees are free to do whatever they want with their own plug-ins
+      that they have exclusively written.
+   d) If the DANCE system is used for any of your projects, we would not
+      require, but would appreciate acknowledgement of the DANCE system.
+	
+4) Distribution
+    a) The original DANCE system is free to re-distribute as long as the
+       contents of the distributions have not been modified in any way. This
+       includes removing or adding files, altering source code or binaries, 
+       and edition of files.
+    b) Permission to distribute modified versions of the DANCE system must
+       be granted by the DANCE authors.
+    c) Plug-ins written entirely by the licensee are distributable under
+       the licensee's own terms.
+    d) Portions of the DANCE system written by third parties are distributable
+       under their own licensing agreements.
+    e) The DANCE system is distributed in the hope that it will be useful
+       but WITHOUT ANY WARRANTY. The author(s) do not accept responsibility
+       to anyone for the consequences of using it or for whether it serves
+       any particular purpose or works at all. No warranty is made about
+       the software or its performance.                          

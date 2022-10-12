@@ -1,0 +1,36 @@
+PROG = $(OBJECT_DIR)/$(SYS).so
+SDFAST_HOST = dali.dgp
+PROG_DIR = $(DANCE_DIR)
+SD_SCRIPTS = $(DANCE_DIR)/scripts/sdfast
+OBJECT_DIR = $(DANCE_DIR)/sdfastObjs/$(SYS)
+SDFASTOBJS = $(OBJECT_DIR)/$(SYS)_dyn.o $(OBJECT_DIR)/$(SYS)_sar.o $(OBJECT_DIR)/$(SYS)lib.o
+LIBS = -lm
+
+all: irix
+
+irix:
+	@echo "Creating Irix version."
+	@make 'CC=CC' \
+	      'LDFLAGS = -shared' \
+	      'CFLAGS = -c -g3  -woff 3262' -f Makefile_dyn_comp_no_rsh $(PROG)
+
+linux:
+	@echo "Creating Linux version."
+	@make 'CC=g++' \
+ 	      'LDFLAGS = -shared' \
+	      'CFLAGS = -c -O3  ' -f Makefile_dyn_comp_no_rsh $(PROG)
+
+$(OBJECT_DIR)/$(SYS)_dyn.o:  $(OBJECT_DIR)/$(SYS)_dyn.c 
+	$(CC) $(CFLAGS) $(DEFINES) $(OBJECT_DIR)/$(SYS)_dyn.c -o $(OBJECT_DIR)/$(SYS)_dyn.o
+
+
+$(OBJECT_DIR)/$(SYS)_sar.o: $(OBJECT_DIR)/$(SYS)_sar.c
+	$(CC) $(CFLAGS) $(DEFINES) $(OBJECT_DIR)/$(SYS)_sar.c -o $(OBJECT_DIR)/$(SYS)_sar.o
+
+$(OBJECT_DIR)/$(SYS)lib.o:  $(OBJECT_DIR)/$(SYS)lib.c 
+	$(CC) $(CFLAGS) $(DEFINES) $(OBJECT_DIR)/$(SYS)lib.c -o $(OBJECT_DIR)/$(SYS)lib.o
+
+$(OBJECT_DIR)/$(SYS).so: $(OBJECT_DIR)/sdfast.h $(SDFASTOBJS) $(OBJECT_DIR)/$(SYS).sd
+	$(CC) $(LDFLAGS)  $(SDFASTOBJS) -o $(OBJECT_DIR)/$(SYS).so $(LIBS)
+
+

@@ -1,0 +1,96 @@
+Installation
+-------------
+
+This is a short installation manual. For more info read the Installation
+section in doc/usemanual.{ps,pdf,html}
+
+The DANCE system is packaged as a single archived file which expands
+into a directory structure, complete with standard subdirectory names.
+Once you have expanded the archive into a given path location, you
+must then set a special DANCE_DIR environment variable to point to
+that location.  The first two sections describe how to install a
+{\em development} environment for DANCE on Windows-based and
+Unix-based operating systems respectively. The third section
+describes how to install a run-only version of
+DANCE.  
+
+Expanding on Windows 95/98/NT/2000
+----------------------------------
+
+Use the danceWinXX.zip file archive, where XX refers to a specific
+version number. Using a Windows-based file unarchiver like WinZip, you
+can expand the file into a desired target destination <pathname>. 
+After expanding, the DANCE distribution should be located in: 
+<pathname>/dance.
+
+To set the environment variable, there are two possibilities:
+
+[\bf Windows NT] From the Start -> Settings -> Control Panel window,
+click on the System applet. Choose the environment tab and create a
+new DANCE_DIR environment variable with the value set to
+<pathname>/dance.  NOTE: It is VERY important to use forward slashes
+in the entire path of DANCE_DIR because dance uses Tcl/Tk as its
+scripting environment. Several operations in Tcl assume that the
+forward slash convention is used to separate out directory names in
+Tcl and may fail if the Windows backslash convention is used
+instead. This also ensures consistency of pathnames across multiple
+operating systems.  You can set DANCE_DIR either as a system variable
+or user variable depending on whether you want to share a common dance
+distribution with all users on the same computer or have each user
+have their own DANCE distribution directory.
+
+[\bf Windows 98] From a dos command-line or compatible shell
+window, you can set the DANCE_DIR as follows:
+set DANCE\_DIR=<pathname>/dance
+This line can also be placed in the autoexec.bat file for automatic
+initialization during boot-up, as would be desired for Windows 98.
+
+Finally, the PATH environment variable should be set to include the DANCE
+distribution directory:
+set PATH=%PATH%;<pathname>\dance\bin.
+
+As an example, if I unarchived DANCE into D:\Work\dance, I would set DANCE_DIR to
+D:/Work/dance and the PATH would include D:\Work\dance\bin.
+
+Expanding on Unix-based operating systems
+-----------------------------------------
+
+The procedure for Unix-based operating systems (so far tested on Linux and
+Irix), is similar to Windows. Simply unarchive the appropriate OS distribution in the
+destination directory:
+
+tar -zxvf danceUnixXX.tgz
+
+where XX refers to the version number.
+The DANCE_DIR environment variable should be set using the method of
+whichever shell you are using. 
+
+For example, one could use
+setenv DANCE_DIR <pathname>/dance 
+or
+set DANCE_DIR=<pathname>/dance 
+
+In addition, set LD_LIBRARY_PATH to include <pathname>/dance/lib/Linux or
+<pathname>/dance/lib/Irix. For example 
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:<pathname>/dance/lib/Linux
+
+Lastly, set your path variable to include <pathname>/dance/bin.
+
+Run-only Version
+-----------------
+
+The Run-only version is a restricted distribution that contains only
+the files necessary to operate the DANCE application and its installed
+plug-ins. It is not possible to develop with DANCE, as the source
+directories for the core program and the plug-ins, the include files,
+and the link libraries are all not included. This distribution is
+useful if you want to distribute DANCE only for demonstration
+purposes. In the $DANCE_DIR/scripts directory, you will find a
+shell-script called "CreateRunTime". This script contains the unix
+shell commands needed to create a run-time version of DANCE. The
+script should be run from the desired destination directory where you
+would like to install the dance root directory and the required
+subdirectories. This script will work in a Windows environment if the
+Cygnus tools are installed. Alternatively, you can replace the unix
+commands with their DOS equivalents (for example, replace cp with
+copy) to create a batch file which does the equivalent operations.

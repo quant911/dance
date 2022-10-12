@@ -1,0 +1,15 @@
+# Author: Victor Ng, Sept. 2, 99
+# This script will create a run-time version of DANCE (no code).
+# It's not entirely optimal, but it will save some space.
+# Copy the script file to the destination directory and source it.
+mkdir dance
+cd dance
+#cp -r $DANCE_DIR/run .
+cp -r $DANCE_DIR/bin .
+cp -r $DANCE_DIR/data .
+cp -r $DANCE_DIR/sdfastObjs .
+cp -r $DANCE_DIR/scripts .
+cp -r $DANCE_DIR/plugins .
+cp -r $DANCE_DIR/doc .
+cp -r $DANCE_DIR/lib .
+cp $DANCE_DIR/license.txt .

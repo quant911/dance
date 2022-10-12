@@ -1,0 +1,7 @@
+Arcball code originally from Graphics Gems IV, by Ken Shoemake, 1993.
+Under to book's preface, 
+"You are free to use and modify this code in any way you like."
+
+This arcball code was modified by 
+Victor Ng, Jan. 1996 to work with OpenGL and to allow initialization of
+arcball information to arbitrary orientations.

@@ -1,0 +1,43 @@
+HOW TO USE THE IKActuatorForce Plugin:
+
+To create an instance of the plugin type:
+"instance IKActuatorForce <actuator name> <ArticulatedObject name>"
+in the command shell.  The ArticulatedObject must have been previously instanciated.
+This will create in instance that will act on the ArticulatedObject.   Instances of IKActuatorForce and
+ArticulatedObject should have a 1:1 ratio.
+
+Once the you have an instance, you can manipulate it by opening the interface for it.  To do this choose 
+Actautors from edit menu, and then select the IKActuatorForce by name.
+
+Type "a" in the viewing window to interact with the actuator.   The first link in the ArticulatedObject 
+that you click on will become the root.  The root cannot move or rotate.  To create an end effector and 
+a goal, select "Add position constraint" or "Add orientation constraint" from the Constraints menu, and 
+click on another link in the viewing window.  The endEffector and all the joints used by the ik will be 
+indicated by blue spheres.  
+
+Position Constraints:
+To move the goal for a position constraint, simply click on the red sphere, and the click and drag it. 
+The link selected as the endEffector should follow
+
+Orientation Constraints:
+The green or blue arrow is the axis of the endEffector.  The actuator will try to line this arrow up with
+the red goal arrow. To change the goal, click on the red arrow and drag left or right.  
+The left button rotates the goal arrow around the y axis, the right button the z axis.  To change the
+axis (and thus constrain the endEffector in differenct planes) use the shift key while clicking and 
+dragging.
+
+Reseting the root:
+To reset the root, choose "Reset all" in the constraints menu.  This will remove the root and all 
+constraints.  Clicking a link will then reset the root to that link.
+
+Using the actuator without the interface:
+IKActuatorForce does not currently support IK solving without the using the mouse to select and to adjust
+constraint.  However, it is possible to modify the CommandPlugin procedure so the the actuator would 
+respond to more scripted commands.  Additional procedures would have to be added, probably based on the
+addConstraint procedure (to add constraints to certain links), and the Interact and HandleConstraintEdit 
+procedures (which adjust the goals of the constraints).
+
+Known Bugs:
+When running dance on a windows platform, there is a chance using the "Reset all" command will crash the 
+program.   
+
